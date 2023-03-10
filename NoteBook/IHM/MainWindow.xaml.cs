@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Metier;
+using Stockage;
 
 namespace IHM
 {
@@ -20,9 +22,14 @@ namespace IHM
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Notebook notebook;
+        private ICourseDao courseDao;
         public MainWindow()
         {
             InitializeComponent();
+            string chemin = "\"C:\\Users\\romac\\OneDrive\\Documents\\GitHub\\Architecture_logicielle\\BDD.db\"";
+            courseDao = new CourseDao(chemin);
+            notebook = new Notebook(courseDao, chemin);
         }
     }
 }

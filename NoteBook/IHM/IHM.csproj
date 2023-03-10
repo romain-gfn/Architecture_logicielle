@@ -21,4 +21,9 @@
     <Folder Include="image\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Metier\Metier.csproj" />
+    <ProjectReference Include="..\Stockage\Stockage.csproj" />
+  </ItemGroup>
+
 </Project>
