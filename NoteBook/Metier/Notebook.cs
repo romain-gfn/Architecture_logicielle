@@ -14,5 +14,43 @@ namespace Metier
         {
             this.courseDao = courseDao;
         }
+
+        Course CreateCourse()
+        {
+            return new Course();
+        }
+        void ModifyCourse(Course t)
+        {
+            courseDao.Update(t);
+        }
+
+        void RemoveCourse(Course t) {
+            courseDao.Delete(t);
+        }
+
+        public Course[] ListAll()
+        {
+            return courseDao.ListAll();
+        }
+
+        public void Create(Course course)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read(string course)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Course t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Course t)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

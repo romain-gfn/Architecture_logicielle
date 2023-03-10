@@ -27,9 +27,17 @@ namespace IHM
         public MainWindow()
         {
             InitializeComponent();
-            string chemin = "\"C:\\Users\\romac\\OneDrive\\Documents\\GitHub\\Architecture_logicielle\\BDD.db\"";
+            string chemin = "C:\\Users\\romac\\OneDrive\\Documents\\GitHub\\Architecture_logicielle\\BDD.db";
             courseDao = new CourseDao(chemin);
             notebook = new Notebook(courseDao, chemin);
         }
+
+        private void ListeMatiere(object sender, RoutedEventArgs e)
+        {
+            Matiere matiere = new Matiere(notebook);
+            matiere.Show();
+        }
+
+        
     }
 }

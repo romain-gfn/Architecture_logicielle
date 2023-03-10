@@ -10,14 +10,11 @@ namespace Metier
 {
     public interface ICourseDao
     {
-        /*
-        void Create(Course course)
-        {
-        }
-        void Read(string course) { }
-        void Update(Course t) { }
-        void Delete(Course t) { }
-        Course[] ListAll() { }
-        */
+        void Create(Course course);
+        void Read(string course);
+        void Update(Course t);
+        void Delete(Course t);
+
+        Course[] ListAll();
     }
 }
