@@ -35,12 +35,12 @@ namespace Metier
 
         public void Create(Course course)
         {
-            throw new NotImplementedException();
+            courseDao.Create(course);
         }
 
         public void Read(string course)
         {
-            throw new NotImplementedException();
+            courseDao.Read(course);
         }
 
         public void Update(Course t)

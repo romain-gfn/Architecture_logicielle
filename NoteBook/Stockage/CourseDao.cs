@@ -48,18 +48,38 @@ namespace Stockage
 
         public void Create(Course course)
         {
-            throw new NotImplementedException();
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO Course(Code,Name,Weight) VALUES('"
+            + course.Code + "','" + course.Name + "',"
+           + course.Weight.ToString() + ");";
+            command.ExecuteNonQuery();
+            connection.Close();
         }
 
-        public void Read(string course)
+        public Course? Read(string Code)
         {
-            throw new NotImplementedException();
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT * FROM Course WHERE Code = {code}'";
+            Course? course = null;
+            using (var reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                    course = Reader2Course(reader);
+            }
+            return course;
         }
 
-        public void Update(Course t)
+        public void Update(Course course)
         {
-            throw new NotImplementedException();
+            connection.Open();
+            var command = connection.CreateCommand();
+            command.CommandText = "UPDATE Course SET Name='" + course.Name + "',Weight = " + course.Weight.ToString()+ "'WHERE Code'=" + course.Code + "';";
+            command.ExecuteNonQuery();
+            connection.Close();
         }
+
 
         public void Delete(Course t)
         {
@@ -69,7 +89,6 @@ namespace Stockage
             command.ExecuteNonQuery();
             connection.Close();
         }
-
   
     }
 }
