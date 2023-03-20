@@ -60,6 +60,10 @@ namespace Metier
                 coef = value;
             }
         }
+        public override string ToString()
+        {
+            return this.score + " " + this.teacher + " " + this.dateExam  + " " + this.coef;
+        }
 
     }
 }

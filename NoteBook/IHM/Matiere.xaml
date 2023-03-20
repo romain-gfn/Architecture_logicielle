@@ -8,7 +8,7 @@
         Title="Matiere" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="list" Margin="30,30,504,30"/>
-        <Button Click="Supprimer_Button" Content="Supprimer" HorizontalAlignment="Left" Margin="555,55,0,0" VerticalAlignment="Top" Height="42" Width="106" Click="Button_Click"/>
+        <Button Click="Supprimer_Button" Content="Supprimer" HorizontalAlignment="Left" Margin="555,55,0,0" VerticalAlignment="Top" Height="42" Width="106"/>
         <Button Click="Update_Button" Content="Update" HorizontalAlignment="Left" Margin="555,129,0,0" VerticalAlignment="Top" Height="33" Width="106"/>
         <Button Click="Add_Click" Content="Add" HorizontalAlignment="Left" Margin="555,202,0,0" VerticalAlignment="Top" Height="34" Width="106"/>
     </Grid>

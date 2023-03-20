@@ -1,0 +1,19 @@
+﻿<Window x:Class="IHM.ExamScreens"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IHM"
+        mc:Ignorable="d"
+        Title="ExamScreens" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
+        <Button Click="CreateExams" Content="CreateExam" HorizontalAlignment="Left" Margin="127,372,0,0" VerticalAlignment="Top" Height="52" Width="107"/>
+        <Button Click="closeButton" Content="Close" HorizontalAlignment="Left" Margin="97,372,0,0" VerticalAlignment="Top" Height="52" Width="108" Grid.Column="1"/>
+        <ListBox Name="ListExams" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="48,40,48,106" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

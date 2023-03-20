@@ -24,6 +24,7 @@ namespace IHM
     {
         private Notebook notebook;
         private ICourseDao courseDao;
+        private IExamDao examDao;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace IHM
             matiere.Show();
         }
 
-        
+
+        private void Edit_Exams(object sender, RoutedEventArgs e)
+        {
+            ExamScreens examPage = new ExamScreens (notebook);
+            examPage.ShowDialog();
+        }
     }
 }

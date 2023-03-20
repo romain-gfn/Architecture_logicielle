@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image Margin="326,140,326,139" Source="imagre/victor.png" Stretch="Fill"/>
-        <Button Click="ListeMatiere" Content="table des matiere" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Height="35" Width="149"/>
+        <Image Margin="184,140,468,139" Source="imagre/victor.png" Stretch="Fill"/>
+        <Button Click="ListeMatiere" Content="table des matiere" HorizontalAlignment="Left" Margin="183,300,0,0" VerticalAlignment="Top" Height="35" Width="149"/>
+        <Button Click="Edit_Exams" Content="Edit Exams" HorizontalAlignment="Left" Margin="528,153,0,0" VerticalAlignment="Top" Height="107" Width="122" />
     </Grid>
 </Window>
