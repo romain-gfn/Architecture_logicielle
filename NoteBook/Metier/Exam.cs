@@ -12,6 +12,11 @@ namespace Metier
         private string teacher;
         private DateTime dateExam;
         private int coef;
+        private Course course;
+
+        public Exam(Course course) {
+            this.course = course;
+        }
 
         public float Score
         {
