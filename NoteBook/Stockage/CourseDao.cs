@@ -89,6 +89,10 @@ namespace Stockage
             command.ExecuteNonQuery();
             connection.Close();
         }
-  
+
+        void ICourseDao.Read(string course)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
